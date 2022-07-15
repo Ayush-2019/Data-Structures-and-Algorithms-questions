@@ -11,7 +11,7 @@ class Sol
         
         for(int i=0;i<=n;i++){
             for(int j=0;j<i;j++){
-                if(B.indexOf(A.substring(j,i)) != -1){
+                if(dp[j] && B.indexOf(A.substring(j,i)) != -1){
                     dp[i] = true;
                     break;
                 }
