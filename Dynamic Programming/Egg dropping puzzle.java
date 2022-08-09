@@ -25,7 +25,37 @@ class Solution
 	    return dp[n][f] = ans;
 	}
     
-    
+    //Optimized code using binary search
+	
+	public int solveOP(int dp[][], int n, int f) 
+	{
+	    // Your code here
+	    if(n == 0) return 0;
+	    
+	    if(n == 1) return f;
+	    
+	    if(f==0 || f==1) return f;
+	    
+	    if(dp[n][f] != -1) return dp[n][f];
+	    int ans = Integer.MAX_VALUE;
+	    
+        int l = 1, h = f;
+	    while(l<h){
+            
+            int mid = l + (h-l)/2;
+	        
+	        int will_break = solve(dp, n-1, mid-1);
+	        int not_break = solve(dp, n, f-mid);
+	        
+	        ans = Math.min(ans, 1+Math.max(will_break, not_break));
+            
+            if(will_break>not_break) h = mid;
+            
+            else l = mid+1;
+	    }
+	   
+	    return dp[n][f] = ans;
+	}
     
     static int eggDrop(int n, int f) 
 	{
