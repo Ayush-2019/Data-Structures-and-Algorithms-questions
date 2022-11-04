@@ -5,14 +5,13 @@ class Solution {
         String a[] = ip.split("[.]");
         for (String s : a) {
             int i = Integer.parseInt(s);
-            if (s.length() > 3 || i < 0 || i > 255) {
-                return false;
-            }
-            if (s.length() > 1 && i == 0)
-                return false;
-            if (s.length() > 1 && i != 0
-                && s.charAt(0) == '0')
-                return false;
+            
+            if(s.length() > 1 && i!=0 && s.charAt(0) == '0') return false;
+            if(s.length()>1 && i==0) return false;
+            
+            if(i<0 || i>255) return false;
+            
+            
         }
  
         return true;
