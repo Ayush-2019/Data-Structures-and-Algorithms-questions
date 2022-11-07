@@ -12,14 +12,14 @@ class Solution
         int n2 = r - m;
  
         
-        long L[] = new long[n1];
-        long R[] = new long[n2];
+        long L[] = Arrays.copyOfRange(arr, l, m+1);
+        long R[] = Arrays.copyOfRange(arr, m+1, r+1);
  
         
-        for (int i = 0; i < n1; ++i)
-            L[i] = arr[l + i];
-        for (int j = 0; j < n2; ++j)
-            R[j] = arr[m + 1 + j];
+        // for (int i = 0; i < n1; ++i)
+        //     L[i] = arr[l + i];
+        // for (int j = 0; j < n2; ++j)
+        //     R[j] = arr[m + 1 + j];
  
         
         int i = 0, j = 0;
