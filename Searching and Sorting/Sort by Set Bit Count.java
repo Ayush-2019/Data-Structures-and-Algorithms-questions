@@ -31,7 +31,7 @@ class Compute
         });
     }
   
-  //Approach 1:- TC:- O(n) SC:- O(n) use List of size 32 and n elements in it
+  //Approach 1:- TC:- O(n) SC:- O(n) used List of size 32 and n elements in it
       static void sortBySetBitCountEff(Integer arr[], int n)
     { 
         
