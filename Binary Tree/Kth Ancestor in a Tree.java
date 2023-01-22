@@ -44,7 +44,6 @@ class Tree
     }
     return null;
         
-        //if (kthAncestorDFS(root,node) != null) System.out.println("-1");    Put this code in main function
 }
     
     public int kthAncestor(Node root, int k, int node)
